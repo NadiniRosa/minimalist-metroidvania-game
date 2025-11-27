@@ -1,9 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Health Settings")]
+    public int health;
+    public int maxHealth;
+    [Space(5)]
+
     [Header("Horizontal Movement Settings")]
     [SerializeField] private float walkSpeed = 1;
     [Space(5)]
@@ -17,7 +23,9 @@ public class PlayerController : MonoBehaviour
     private float jumpBufferCounter = 0;
     private float coyoteTimeCounter = 0;
     private int airJumpCounter = 0;
-
+    
+    private bool canDash = true;
+    private bool dashed;
     [Space(5)]
 
     [Header("Ground Check Settings")]
@@ -40,11 +48,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform sideAttackTransform, upAttackTransform, downAttackTransform;
     [SerializeField] private Vector2 sideAttackArea, upAttackArea, downAttackArea;
     [SerializeField] private LayerMask attackableLayer;
-    
-    private bool canDash = true;
-    private bool dashed;
 
-    PlayerStateList playerState;
+    [Header("Recoil Settings:")]
+    [SerializeField] private int recoilXSteps = 5;
+    [SerializeField] private int recoilYSteps = 5;
+    [Space(3)]
+    [SerializeField] private float recoilXSpeed = 100;
+    [SerializeField] private float recoilYSpeed = 100;
+    [Space(3)]
+    private int stepsXRecoiled, stepsYRecoiled;
+    [Space(5)]
+
+
+    [HideInInspector] public PlayerStateList playerState;
+
     Animator animator;
 
     private Rigidbody2D rb;
@@ -60,6 +77,8 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         else
             Instance = this;
+
+        health = maxHealth;
     }
 
     void Start()
@@ -83,6 +102,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         StartDash();
         Attack();
+        Recoil();
     }
 
     void GetInputs()
@@ -96,9 +116,16 @@ public class PlayerController : MonoBehaviour
     void Flip()
     {
         if (xAxis < 0)
+        {
             transform.localScale = new Vector2(-1, transform.localScale.y);
+            playerState.LookingRight = false;
+        }
+
         else if (xAxis > 0)
+        {
             transform.localScale = new Vector2(1, transform.localScale.y);
+            playerState.LookingRight = true;
+        }
     }
 
     private void OnDrawGizmos()
@@ -216,25 +243,120 @@ public class PlayerController : MonoBehaviour
         {
             timeSinceAttack = 0;
 
+            animator.SetTrigger("Attacking");
+
             if (yAxis == 0 || yAxis < 0 && Grounded())
-                Hit(sideAttackTransform, sideAttackArea);
+                Hit(sideAttackTransform, sideAttackArea, ref playerState.RecoilingX, recoilXSpeed);
             else if (yAxis > 0)
-                Hit(upAttackTransform, upAttackArea);
+                Hit(upAttackTransform, upAttackArea, ref playerState.RecoilingY, recoilYSpeed);
             else if (yAxis < 0 || !Grounded())
-                Hit(downAttackTransform, downAttackArea);
+                Hit(downAttackTransform, downAttackArea, ref playerState.RecoilingY, recoilYSpeed);
         }
     }
 
-    private void Hit(Transform attackTransform, Vector2 attackArea)
+    void Recoil()
     {
-        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(attackTransform.position, attackArea, 0, attackableLayer);
-
-        for (int i = 0; i < objectsToHit.Length; i++)
+        if (playerState.RecoilingX)
         {
-            if (objectsToHit[i].GetComponent<BaseEnemyController>() != null)
+            if (playerState.LookingRight)
             {
-                objectsToHit[i].GetComponent<BaseEnemyController>().EnemyHit(damage);
+                rb.linearVelocity = new Vector2(-recoilXSpeed, 0);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(recoilXSpeed, 0);
             }
         }
+
+        if (playerState.RecoilingY)
+        {
+            rb.gravityScale = 0;
+            if (yAxis < 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, recoilYSpeed);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -recoilYSpeed);
+            }
+            airJumpCounter = 0;
+        }
+        else
+        {
+            rb.gravityScale = gravity;
+        }
+
+        if (playerState.RecoilingX && stepsXRecoiled < recoilXSteps)
+        {
+            stepsXRecoiled++;
+        }
+        else
+        {
+            StopRecoilX();
+        }
+        if (playerState.RecoilingY && stepsYRecoiled < recoilYSteps)
+        {
+            stepsYRecoiled++;
+        }
+        else
+        {
+            StopRecoilY();
+        }
+
+        if (Grounded())
+        {
+            StopRecoilY();
+        }
+    }
+    void StopRecoilX()
+    {
+        stepsXRecoiled = 0;
+        playerState.RecoilingX = false;
+    }
+    void StopRecoilY()
+    {
+        stepsYRecoiled = 0;
+        playerState.RecoilingY = false;
+    }
+
+    void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
+    {
+        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
+        List<Enemy> hitEnemies = new List<Enemy>();
+
+        if (objectsToHit.Length > 0)
+        {
+            _recoilDir = true;
+        }
+        for (int i = 0; i < objectsToHit.Length; i++)
+        {
+            Enemy e = objectsToHit[i].GetComponent<Enemy>();
+            if (e && !hitEnemies.Contains(e))
+            {
+                e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
+                hitEnemies.Add(e);
+            }
+        }
+    }
+
+    public void TakeDamage(float _damage)
+    {
+        health -= Mathf.RoundToInt(_damage);
+
+        StartCoroutine(StopTakingDamage());
+    }
+
+    IEnumerator StopTakingDamage()
+    {
+        playerState.Invincible = true;
+        animator.SetTrigger("TakeDamage");
+        ClampHealth();
+        yield return new WaitForSeconds(1f);
+        playerState.Invincible = false;
+    }
+
+    void ClampHealth()
+    {
+        health = Mathf.Clamp(health, 0, maxHealth);
     }
 }

@@ -212,6 +212,10 @@ MonoBehaviour:
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
+  recoilXSteps: 3
+  recoilYSteps: 3
+  recoilXSpeed: 25
+  recoilYSpeed: 25
 --- !u!114 &3530212466220639523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +230,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jumping: 0
   Dashing: 0
+  RecoilingX: 0
+  RecoilingY: 0
+  LookingRight: 0
 --- !u!212 &1945186168834011897
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: 902145377931972618
     second: SPR_Player_Attack_04_0
-  - first:
-      213: -50452724380121770
-    second: SPR_Player_Attack_04_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +144,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 230
+        width: 357
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,33 +160,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SPR_Player_Attack_04_1
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 67
-        width: 137
-        height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6554f55b381cc4ff0800000000000000
-      internalID: -50452724380121770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -200,7 +175,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       SPR_Player_Attack_04_0: 902145377931972618
-      SPR_Player_Attack_04_1: -50452724380121770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

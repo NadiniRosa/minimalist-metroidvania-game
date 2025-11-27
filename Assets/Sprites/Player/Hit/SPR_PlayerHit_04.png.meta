@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d97a542008e13944937fa72eeb4fb29
+guid: 9033bb40f4891074b817f35bbfc4403b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2412597634318766771
-    second: SPR_Player_Attack_03_0
+      213: 2748549208896369404
+    second: SPR_PlayerHit_04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_Player_Attack_03_0
+      name: SPR_PlayerHit_04_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 357
-        height: 256
+        y: 3
+        width: 256
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b2948314c44b7120800000000000000
-      internalID: 2412597634318766771
+      spriteID: cf2f2fb61fec42620800000000000000
+      internalID: 2748549208896369404
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SPR_Player_Attack_03_0: 2412597634318766771
+      SPR_PlayerHit_04_0: 2748549208896369404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
