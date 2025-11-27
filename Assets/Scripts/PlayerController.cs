@@ -32,14 +32,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
 
+    [Header("Attack Settings")]
+    private bool attack = false;
+    private float timeBetweenAttack, timeSinceAttack;
+
+    [SerializeField] private float damage;
+    [SerializeField] private Transform sideAttackTransform, upAttackTransform, downAttackTransform;
+    [SerializeField] private Vector2 sideAttackArea, upAttackArea, downAttackArea;
+    [SerializeField] private LayerMask attackableLayer;
+    
     private bool canDash = true;
     private bool dashed;
 
-
     PlayerStateList playerState;
+    Animator animator;
+
     private Rigidbody2D rb;
     private float gravity;
-    private float xAxis;
+    private float xAxis, yAxis;
 
 
     public static PlayerController Instance;
@@ -56,6 +66,8 @@ public class PlayerController : MonoBehaviour
     {
         playerState = GetComponent<PlayerStateList>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
         gravity = rb.gravityScale;
     }
 
@@ -70,11 +82,15 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
         StartDash();
+        Attack();
     }
 
     void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
+
+        attack = Input.GetMouseButtonDown(0);
     }
 
     void Flip()
@@ -85,9 +101,18 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector2(1, transform.localScale.y);
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(sideAttackTransform.position, sideAttackArea);
+        Gizmos.DrawWireCube(upAttackTransform.position, upAttackArea);
+        Gizmos.DrawWireCube(downAttackTransform.position, downAttackArea);
+    }
+
     private void Move()
     {
         rb.linearVelocity = new Vector2(walkSpeed * xAxis, rb.linearVelocity.y);
+        animator.SetBool("Walking", rb.linearVelocity.x != 0 && Grounded());
     }
 
     public bool Grounded()
@@ -117,6 +142,8 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         playerState.Dashing = true;
 
+        animator.SetTrigger("Dashing");
+
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, 0);
 
@@ -132,10 +159,9 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && rb.linearVelocity.y > 0)
+        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-
             playerState.Jumping = false;
         }
 
@@ -155,6 +181,8 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
             }
         }
+
+        animator.SetBool("Jumping", !Grounded());
     }
 
     void UpdateJumpVariables()
@@ -177,6 +205,36 @@ public class PlayerController : MonoBehaviour
         else
         {
             jumpBufferCounter--;
+        }
+    }
+
+    void Attack()
+    {
+        timeSinceAttack += Time.deltaTime;
+
+        if (attack && timeSinceAttack >= timeBetweenAttack)
+        {
+            timeSinceAttack = 0;
+
+            if (yAxis == 0 || yAxis < 0 && Grounded())
+                Hit(sideAttackTransform, sideAttackArea);
+            else if (yAxis > 0)
+                Hit(upAttackTransform, upAttackArea);
+            else if (yAxis < 0 || !Grounded())
+                Hit(downAttackTransform, downAttackArea);
+        }
+    }
+
+    private void Hit(Transform attackTransform, Vector2 attackArea)
+    {
+        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(attackTransform.position, attackArea, 0, attackableLayer);
+
+        for (int i = 0; i < objectsToHit.Length; i++)
+        {
+            if (objectsToHit[i].GetComponent<BaseEnemyController>() != null)
+            {
+                objectsToHit[i].GetComponent<BaseEnemyController>().EnemyHit(damage);
+            }
         }
     }
 }
