@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     protected void OnTriggerStay2D(Collider2D _other)
     {
-        if (_other.CompareTag("Player") && !PlayerController.Instance.playerState.Invincible)
+        if (_other.CompareTag("Player") && !PlayerController.Instance.playerState.Invincible && !PlayerController.Instance.IsDead)
         {
             Attack();
         }

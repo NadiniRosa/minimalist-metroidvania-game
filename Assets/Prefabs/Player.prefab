@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 7590078367540139451}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ace43299fa9df74ca77180595231470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 5
   walkSpeed: 20
   jumpForce: 35
   jumpBufferFrames: 8
@@ -198,7 +200,7 @@ MonoBehaviour:
   groundCheckX: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   dashSpeed: 70
   dashTime: 0.2
   dashCooldown: 0.35
@@ -206,9 +208,9 @@ MonoBehaviour:
   sideAttackTransform: {fileID: 4970087824056284117}
   upAttackTransform: {fileID: 7793182950731998224}
   downAttackTransform: {fileID: 8011816656371383133}
-  sideAttackArea: {x: 4.5, y: 3.5}
-  upAttackArea: {x: 3.5, y: 4.5}
-  downAttackArea: {x: 3.5, y: 4.5}
+  sideAttackArea: {x: 2.5, y: 3.5}
+  upAttackArea: {x: 3.5, y: 2.5}
+  downAttackArea: {x: 3.5, y: 2.5}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -216,6 +218,10 @@ MonoBehaviour:
   recoilYSteps: 3
   recoilXSpeed: 25
   recoilYSpeed: 25
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerState: {fileID: 0}
 --- !u!114 &3530212466220639523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +239,7 @@ MonoBehaviour:
   RecoilingX: 0
   RecoilingY: 0
   LookingRight: 0
+  Invincible: 0
 --- !u!212 &1945186168834011897
 SpriteRenderer:
   m_ObjectHideFlags: 0

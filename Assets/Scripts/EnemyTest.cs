@@ -13,7 +13,7 @@ public class EnemyTest : Enemy
     {
         base.Update();
 
-        if (!isRecoiling)
+        if (!isRecoiling && !PlayerController.Instance.IsDead)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(PlayerController.Instance.transform.position.x, transform.position.y), speed * Time.deltaTime);
         }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +7,9 @@ public class PlayerController : MonoBehaviour
     [Header("Health Settings")]
     public int health;
     public int maxHealth;
+
+    private bool isDead = false;
+    public bool IsDead => isDead;
     [Space(5)]
 
     [Header("Horizontal Movement Settings")]
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 sideAttackArea, upAttackArea, downAttackArea;
     [SerializeField] private LayerMask attackableLayer;
 
-    [Header("Recoil Settings:")]
+    [Header("Recoil Settings")]
     [SerializeField] private int recoilXSteps = 5;
     [SerializeField] private int recoilYSteps = 5;
     [Space(3)]
@@ -58,6 +60,14 @@ public class PlayerController : MonoBehaviour
     [Space(3)]
     private int stepsXRecoiled, stepsYRecoiled;
     [Space(5)]
+
+    [Header("Platform Settings")]
+    [SerializeField] private LayerMask platformLayer;
+    
+    private Collider2D playerCollider;
+
+    private int playerLayer;
+    private bool droppingFromPlatform = false;
 
 
     [HideInInspector] public PlayerStateList playerState;
@@ -88,10 +98,15 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         gravity = rb.gravityScale;
+
+        playerLayer = gameObject.layer;
+        playerCollider = GetComponent<Collider2D>();
     }
 
     void Update()
     {
+        if (!IsAlive()) return;
+
         GetInputs();
         UpdateJumpVariables();
 
@@ -111,6 +126,27 @@ public class PlayerController : MonoBehaviour
         yAxis = Input.GetAxisRaw("Vertical");
 
         attack = Input.GetMouseButtonDown(0);
+    }
+
+    bool IsAlive()
+    {
+        if (isDead) return false;
+
+        if (health <= 0)
+        {
+            isDead = true;
+            playerState.Invincible = true;
+
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            rb.gravityScale = gravity;
+
+            animator.SetTrigger("Death");
+            GameManager.Instance.PlayerDied();
+
+            return false;
+        }
+
+        return true;
     }
 
     void Flip()
@@ -144,6 +180,9 @@ public class PlayerController : MonoBehaviour
 
     public bool Grounded()
     {
+        if (droppingFromPlatform)
+            return false;
+
         if (Physics2D.Raycast(groundCheckPoint.position, Vector2.down, groundCheckY, groundLayer)
          || Physics2D.Raycast(groundCheckPoint.position + new Vector3(groundCheckX, 0, 0), Vector2.down, groundCheckY, groundLayer)
          || Physics2D.Raycast(groundCheckPoint.position + new Vector3(-groundCheckX, 0, 0), Vector2.down, groundCheckY, groundLayer))
@@ -154,6 +193,8 @@ public class PlayerController : MonoBehaviour
 
     void StartDash()
     {
+        if (!GameManager.Instance.DashUnlocked) return;
+
         if (Input.GetButtonDown("Dash") && canDash && !dashed)
         {
             StartCoroutine(Dash());
@@ -192,19 +233,31 @@ public class PlayerController : MonoBehaviour
             playerState.Jumping = false;
         }
 
+        if (Grounded() && yAxis < 0 && Input.GetButtonDown("Jump"))
+        {
+            StartCoroutine(DropDownPlatform());
+            return;
+        }
+
         if (!playerState.Jumping)
         {
+            if (!Grounded() && !GameManager.Instance.DoubleJumpUnlocked)
+                coyoteTimeCounter = 0;
+
             if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
             {
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
-
                 playerState.Jumping = true;
+                return;
             }
-            else if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+
+            if (!Grounded()
+                && GameManager.Instance.DoubleJumpUnlocked
+                && airJumpCounter < maxAirJumps
+                && Input.GetButtonDown("Jump"))
             {
                 playerState.Jumping = true;
                 airJumpCounter++;
-
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
             }
         }
@@ -341,6 +394,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
+        if (isDead) return;
+
         health -= Mathf.RoundToInt(_damage);
 
         StartCoroutine(StopTakingDamage());
@@ -358,5 +413,31 @@ public class PlayerController : MonoBehaviour
     void ClampHealth()
     {
         health = Mathf.Clamp(health, 0, maxHealth);
+    }
+
+    IEnumerator DropDownPlatform()
+    {
+        droppingFromPlatform = true;
+
+        Vector2 boxSize = new Vector2(groundCheckX * 2f, groundCheckY * 2f);
+        Collider2D[] platforms = Physics2D.OverlapBoxAll(groundCheckPoint.position, boxSize, 0f, platformLayer);
+
+        foreach (Collider2D platform in platforms)
+        {
+            if (platform != null)
+            {
+                Physics2D.IgnoreCollision(playerCollider, platform, true);
+            }
+        }
+
+        yield return new WaitForSeconds(0.3f);
+
+        foreach (Collider2D platform in platforms)
+        {
+            if (platform != null)
+                Physics2D.IgnoreCollision(playerCollider, platform, false);
+        }
+
+        droppingFromPlatform = false;
     }
 }
