@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float jumpBufferCounter = 0;
     private float coyoteTimeCounter = 0;
     private int airJumpCounter = 0;
-    
+
     private bool canDash = true;
     private bool dashed;
     [Space(5)]
@@ -63,12 +63,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Platform Settings")]
     [SerializeField] private LayerMask platformLayer;
-    
+    private float platformVelocityX = 0f;
+
     private Collider2D playerCollider;
 
     private int playerLayer;
     private bool droppingFromPlatform = false;
-
 
     [HideInInspector] public PlayerStateList playerState;
 
@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float gravity;
     private float xAxis, yAxis;
-
 
     public static PlayerController Instance;
 
@@ -172,10 +171,29 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireCube(downAttackTransform.position, downAttackArea);
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        MovingPlatform platform = collision.gameObject.GetComponent<MovingPlatform>();
+
+        if (platform != null)
+            platformVelocityX = platform.CurrentVelocityX;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<MovingPlatform>() != null)
+            platformVelocityX = 0f;
+    }
+
     private void Move()
     {
-        rb.linearVelocity = new Vector2(walkSpeed * xAxis, rb.linearVelocity.y);
-        animator.SetBool("Walking", rb.linearVelocity.x != 0 && Grounded());
+        float inputX = walkSpeed * xAxis;
+        float finalX = (Mathf.Abs(xAxis) > 0.01f) ? inputX : platformVelocityX;
+
+        rb.linearVelocity = new Vector2(finalX, rb.linearVelocity.y);
+
+        bool isWalking = Mathf.Abs(xAxis) > 0.01f && Grounded();
+        animator.SetBool("Walking", isWalking);
     }
 
     public bool Grounded()
@@ -375,19 +393,29 @@ public class PlayerController : MonoBehaviour
     void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
+
         List<Enemy> hitEnemies = new List<Enemy>();
+        List<FossilWall> hitWalls = new List<FossilWall>();
 
         if (objectsToHit.Length > 0)
-        {
             _recoilDir = true;
-        }
+
         for (int i = 0; i < objectsToHit.Length; i++)
         {
             Enemy e = objectsToHit[i].GetComponent<Enemy>();
+
             if (e && !hitEnemies.Contains(e))
             {
                 e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
                 hitEnemies.Add(e);
+            }
+
+            FossilWall wall = objectsToHit[i].GetComponent<FossilWall>();
+
+            if (wall && !hitWalls.Contains(wall))
+            {
+                wall.Hit();
+                hitWalls.Add(wall);
             }
         }
     }

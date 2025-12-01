@@ -32,8 +32,14 @@ public class JellyfishBounce : MonoBehaviour
         player.playerState.Jumping = false;
 
         if (animator != null)
-        {
-            animator.SetTrigger("Bonk");
-        }
+            animator.SetBool("Bounce", true);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!collision.collider.CompareTag("Player")) return;
+
+        if (animator != null)
+            animator.SetBool("Bounce", false);
     }
 }
