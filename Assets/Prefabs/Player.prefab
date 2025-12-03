@@ -200,7 +200,7 @@ MonoBehaviour:
   groundCheckX: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 392
   dashSpeed: 70
   dashTime: 0.2
   dashCooldown: 0.35
@@ -283,7 +283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: 2520480597046472144, guid: d5e5abb4e65cdca4fbf013c2860eb072, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
