@@ -396,6 +396,7 @@ public class PlayerController : MonoBehaviour
 
         List<Enemy> hitEnemies = new List<Enemy>();
         List<FossilWall> hitWalls = new List<FossilWall>();
+        List<Seaweed> hitSeaweeds = new List<Seaweed>();
 
         if (objectsToHit.Length > 0)
             _recoilDir = true;
@@ -416,6 +417,14 @@ public class PlayerController : MonoBehaviour
             {
                 wall.Hit();
                 hitWalls.Add(wall);
+            }
+
+            Seaweed seaweed = objectsToHit[i].GetComponent<Seaweed>();
+
+            if (seaweed && !hitSeaweeds.Contains(seaweed))
+            {
+                seaweed.Hit();
+                hitSeaweeds.Add(seaweed);
             }
         }
     }
