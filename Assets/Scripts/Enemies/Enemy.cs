@@ -12,13 +12,13 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] protected bool isRecoiling = false;
 
-
     [SerializeField] protected float speed;
     [SerializeField] protected float damage;
 
-
     [SerializeField] protected PlayerController player;
     protected Rigidbody2D rb;
+
+    protected bool isDead = false;
 
     protected virtual void Start()
     {
@@ -26,11 +26,15 @@ public class Enemy : MonoBehaviour
         player = PlayerController.Instance;
     }
 
-
     protected virtual void Update()
     {
+        if (isDead) return;
+
         if (health <= 0)
-            Destroy(gameObject);
+        {
+            Die();
+            return;
+        }
 
         if (isRecoiling)
         {
@@ -48,6 +52,8 @@ public class Enemy : MonoBehaviour
 
     public virtual void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {
+        if (isDead) return;
+
         health -= _damageDone;
 
         if (!isRecoiling)
@@ -59,13 +65,24 @@ public class Enemy : MonoBehaviour
 
     protected void OnTriggerStay2D(Collider2D _other)
     {
-        if (_other.CompareTag("Player") && !PlayerController.Instance.playerState.Invincible && !PlayerController.Instance.IsDead)
+        if (isDead) return;
+
+        if (_other.CompareTag("Player") &&
+            !PlayerController.Instance.playerState.Invincible &&
+            !PlayerController.Instance.IsDead)
         {
             Attack();
         }
     }
+
     protected virtual void Attack()
     {
         PlayerController.Instance.TakeDamage(damage);
+    }
+
+    protected virtual void Die()
+    {
+        isDead = true;
+        Destroy(gameObject);
     }
 }

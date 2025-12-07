@@ -30,12 +30,13 @@ public class Boxfish : Enemy
 
     protected override void Attack()
     {
-        //box fish dont do damage on touch
+        // boxfish doesnt do damage
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
+        if (isDead) return;
 
         playerInside = true;
         playerTransform = other.transform;
@@ -47,6 +48,7 @@ public class Boxfish : Enemy
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
+        if (isDead) return;
 
         playerInside = false;
 
@@ -59,12 +61,11 @@ public class Boxfish : Enemy
 
     private IEnumerator AttackLoop()
     {
-        while (playerInside)
+        while (playerInside && !isDead)
         {
             if (currentBubble == null)
             {
                 animator.SetTrigger("Attack");
-
                 yield return new WaitForSeconds(attackCooldown);
             }
             else
@@ -75,11 +76,12 @@ public class Boxfish : Enemy
     public void SpawnBubble()
     {
         if (bubblePrefab == null || mouthPoint == null) return;
+        if (isDead) return;
 
         GameObject bubbleObj = Instantiate(bubblePrefab, mouthPoint.position, Quaternion.identity);
         BubbleProjectile bp = bubbleObj.GetComponent<BubbleProjectile>();
 
-        if (bp != null && playerInside && player != null)
+        if (bp != null && playerInside && playerTransform != null)
         {
             currentBubble = bp;
             bp.Initialize(playerTransform, this);
@@ -90,5 +92,42 @@ public class Boxfish : Enemy
     {
         if (currentBubble == bubble)
             currentBubble = null;
+    }
+
+    protected override void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        playerInside = false;
+        if (attackRoutine != null)
+        {
+            StopCoroutine(attackRoutine);
+            attackRoutine = null;
+        }
+
+        if (currentBubble != null)
+        {
+            currentBubble.Pop();
+            currentBubble = null;
+        }
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        foreach (var col in GetComponents<Collider2D>())
+            col.enabled = false;
+
+        if (animator != null)
+            animator.SetTrigger("Death");
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4714808251077280595}
   - component: {fileID: 318162393029900850}
   - component: {fileID: 5474874842274727870}
-  - component: {fileID: 3343600925953023268}
+  - component: {fileID: 4430189970756238369}
   m_Layer: 0
   m_Name: BoxFishBubble
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7066667, y: 1.7066667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTarget: 0.6
-  popEffect: {fileID: 0}
---- !u!95 &3343600925953023268
+  damage: 1
+--- !u!95 &4430189970756238369
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0

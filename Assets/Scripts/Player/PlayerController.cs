@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -72,6 +73,8 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public PlayerStateList playerState;
 
+    public event Action OnHealthChanged;
+
     Animator animator;
 
     private Rigidbody2D rb;
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
             Instance = this;
 
         health = maxHealth;
+        NotifyHealthChanged();
     }
 
     void Start()
@@ -397,6 +401,8 @@ public class PlayerController : MonoBehaviour
         List<Enemy> hitEnemies = new List<Enemy>();
         List<FossilWall> hitWalls = new List<FossilWall>();
         List<Seaweed> hitSeaweeds = new List<Seaweed>();
+        List<Sponges> hitSponges = new List<Sponges>();
+        List<Checkpoint> hitCheckpoints = new List<Checkpoint>();
 
         if (objectsToHit.Length > 0)
             _recoilDir = true;
@@ -426,6 +432,22 @@ public class PlayerController : MonoBehaviour
                 seaweed.Hit();
                 hitSeaweeds.Add(seaweed);
             }
+
+            Sponges sponges = objectsToHit[i].GetComponent<Sponges>();
+
+            if (sponges && !hitSponges.Contains(sponges))
+            {
+                sponges.Hit();
+                hitSponges.Add(sponges);
+            }
+
+            Checkpoint checkpoint = objectsToHit[i].GetComponent<Checkpoint>();
+
+            if (checkpoint && !hitCheckpoints.Contains(checkpoint))
+            {
+                checkpoint.ActivateCheckpoint();
+                hitCheckpoints.Add(checkpoint);
+            }
         }
     }
 
@@ -434,6 +456,8 @@ public class PlayerController : MonoBehaviour
         if (isDead) return;
 
         health -= Mathf.RoundToInt(_damage);
+        ClampHealth();
+        NotifyHealthChanged();
 
         StartCoroutine(StopTakingDamage());
     }
@@ -447,7 +471,7 @@ public class PlayerController : MonoBehaviour
         playerState.Invincible = false;
     }
 
-    void ClampHealth()
+    public void ClampHealth()
     {
         health = Mathf.Clamp(health, 0, maxHealth);
     }
@@ -476,5 +500,45 @@ public class PlayerController : MonoBehaviour
         }
 
         droppingFromPlatform = false;
+    }
+
+    public void NotifyHealthChanged()
+    {
+        OnHealthChanged?.Invoke();
+    }
+
+    public void UnlockExtraLife()
+    {
+        const int MAX_LIVES = 7;
+
+        if (maxHealth >= MAX_LIVES)
+            return;
+
+        maxHealth++;
+        ClampHealth();
+        NotifyHealthChanged();
+    }
+
+    public void RespawnFromCheckpoint(Vector3 position, int savedHealth, int savedMaxHealth)
+    {
+        maxHealth = savedMaxHealth;
+        health = savedHealth;
+        ClampHealth();
+        NotifyHealthChanged();
+
+        transform.position = position;
+
+        isDead = false;
+        playerState.Invincible = false;
+
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = gravity;
+
+        playerState.Dashing = false;
+        playerState.Jumping = false;
+        playerState.RecoilingX = false;
+        playerState.RecoilingY = false;
+
+        animator.Play("PlayerIdle");
     }
 }
