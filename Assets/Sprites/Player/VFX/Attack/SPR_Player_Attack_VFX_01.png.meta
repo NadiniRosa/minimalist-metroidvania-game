@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: ce1fe9f7835316b4d98626f8b7a345a8
+guid: 9508882ed7f48cd429ce0ec4815c41a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2024561660757491972
-    second: SPR_Bubble_Avanco_do_Tritao_0
+      213: -7036750431620645098
+    second: SPR_Player_Attack_VFX_01_0
+  - first:
+      213: -4137260078241438781
+    second: SPR_Player_Attack_VFX_01_1
+  - first:
+      213: 7426766367845133701
+    second: SPR_Player_Attack_VFX_01_2
+  - first:
+      213: -5270244288583139634
+    second: SPR_Player_Attack_VFX_01_3
+  - first:
+      213: -5124550042576347357
+    second: SPR_Player_Attack_VFX_01_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_Bubble_Avanco_do_Tritao_0
+      name: SPR_Player_Attack_VFX_01_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 53
-        width: 384
-        height: 385
+        x: 215
+        y: 172
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40143579a10b81c10800000000000000
-      internalID: 2024561660757491972
+      spriteID: 61fbc26c3c0785e90800000000000000
+      internalID: -7036750431620645098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Attack_VFX_01_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 172
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3a30501ef7596c0800000000000000
+      internalID: -4137260078241438781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Attack_VFX_01_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 141
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d2a31b9ac211760800000000000000
+      internalID: 7426766367845133701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Attack_VFX_01_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 80
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece78731eb45cd6b0800000000000000
+      internalID: -5270244288583139634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Attack_VFX_01_4
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 65
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f168623e0f1e8b0800000000000000
+      internalID: -5124550042576347357
       vertices: []
       indices: 
       edges: []
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SPR_Bubble_Avanco_do_Tritao_0: 2024561660757491972
+      SPR_Player_Attack_VFX_01_0: -7036750431620645098
+      SPR_Player_Attack_VFX_01_1: -4137260078241438781
+      SPR_Player_Attack_VFX_01_2: 7426766367845133701
+      SPR_Player_Attack_VFX_01_3: -5270244288583139634
+      SPR_Player_Attack_VFX_01_4: -5124550042576347357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FossilWall : MonoBehaviour
 {
-    [SerializeField] private int health = 3;
+    [SerializeField] private int health = 5;
 
     private int hitsTaken = 0;
     private bool destroyed = false;

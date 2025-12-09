@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Horizontal Movement Settings")]
     [SerializeField] private float walkSpeed = 1;
+    private bool wasWalking = false;
     [Space(5)]
 
     [Header("Vertical Movement Settings")]
@@ -27,8 +28,9 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimeCounter = 0;
     private int airJumpCounter = 0;
 
-    private bool canDash = true;
-    private bool dashed;
+    [SerializeField] private float jumpSFXMinInterval = 0.2f;
+    private float lastJumpSFXTime = -999f;
+
     [Space(5)]
 
     [Header("Ground Check Settings")]
@@ -43,14 +45,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
 
-    [Header("Attack Settings")]
-    private bool attack = false;
-    private float timeBetweenAttack, timeSinceAttack;
+    private bool canDash = true;
+    private bool dashed;
 
+    [SerializeField] private float dashSFXMinInterval = 0.2f;
+    private float lastDashSFXTime = -999f;
+
+    [Header("Attack Settings")]
+    [SerializeField] private float timeBetweenAttack = 0.4f;
     [SerializeField] private float damage;
-    [SerializeField] private Transform sideAttackTransform, upAttackTransform, downAttackTransform;
-    [SerializeField] private Vector2 sideAttackArea, upAttackArea, downAttackArea;
+    [SerializeField] private Transform sideAttackTransform;
+    [SerializeField] private Vector2 sideAttackArea;
     [SerializeField] private LayerMask attackableLayer;
+
+    private bool attack = false;
+    private float timeSinceAttack = 0f;
+
+    [Header("VFX Settings")]
+    [SerializeField] private GameObject attackVFX;
+    [SerializeField] private float attackVFXDuration = 0.25f;
+    private Coroutine attackVFXRoutine;
 
     [Header("Recoil Settings")]
     [SerializeField] private int recoilXSteps = 5;
@@ -67,7 +81,6 @@ public class PlayerController : MonoBehaviour
     private float platformVelocityX = 0f;
 
     private Collider2D playerCollider;
-
     private int playerLayer;
     private bool droppingFromPlatform = false;
 
@@ -104,6 +117,11 @@ public class PlayerController : MonoBehaviour
 
         playerLayer = gameObject.layer;
         playerCollider = GetComponent<Collider2D>();
+
+        timeSinceAttack = timeBetweenAttack;
+
+        if (attackVFX != null)
+            attackVFX.SetActive(false);
     }
 
     void Update()
@@ -171,8 +189,6 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(sideAttackTransform.position, sideAttackArea);
-        Gizmos.DrawWireCube(upAttackTransform.position, upAttackArea);
-        Gizmos.DrawWireCube(downAttackTransform.position, downAttackArea);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -198,6 +214,16 @@ public class PlayerController : MonoBehaviour
 
         bool isWalking = Mathf.Abs(xAxis) > 0.01f && Grounded();
         animator.SetBool("Walking", isWalking);
+
+        if (AudioService.Instance != null)
+        {
+            if (isWalking && !wasWalking)
+                AudioService.Instance.PlayLoop(SFXType.PlayerMovement);
+            else if (!isWalking && wasWalking)
+                AudioService.Instance.StopLoop(SFXType.PlayerMovement);
+        }
+
+        wasWalking = isWalking;
     }
 
     public bool Grounded()
@@ -221,6 +247,8 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Dash());
             dashed = true;
+
+            PlayDashSFX();
         }
 
         if (Grounded())
@@ -247,6 +275,17 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    void PlayDashSFX()
+    {
+        if (AudioService.Instance == null) return;
+
+        if (Time.time - lastDashSFXTime < dashSFXMinInterval)
+            return;
+
+        AudioService.Instance.PlaySFX(SFXType.PlayerDash);
+        lastDashSFXTime = Time.time;
+    }
+
     void Jump()
     {
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
@@ -270,6 +309,9 @@ public class PlayerController : MonoBehaviour
             {
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
                 playerState.Jumping = true;
+
+                PlayJumpSFX(SFXType.PlayerJump);
+
                 return;
             }
 
@@ -281,6 +323,8 @@ public class PlayerController : MonoBehaviour
                 playerState.Jumping = true;
                 airJumpCounter++;
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
+
+                PlayJumpSFX(SFXType.PlayerDoubleJump);
             }
         }
 
@@ -310,23 +354,56 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void PlayJumpSFX(SFXType jump)
+    {
+        if (AudioService.Instance == null) return;
+
+        if (Time.time - lastJumpSFXTime < jumpSFXMinInterval)
+            return;
+
+        AudioService.Instance.PlaySFX(jump);
+        lastJumpSFXTime = Time.time;
+    }
+
     void Attack()
     {
         timeSinceAttack += Time.deltaTime;
 
         if (attack && timeSinceAttack >= timeBetweenAttack)
         {
-            timeSinceAttack = 0;
+            timeSinceAttack = 0f;
 
             animator.SetTrigger("Attacking");
 
+            PlayAttackVFX();
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.PlaySFX(SFXType.PlayerAttack);
+
             if (yAxis == 0 || yAxis < 0 && Grounded())
                 Hit(sideAttackTransform, sideAttackArea, ref playerState.RecoilingX, recoilXSpeed);
-            else if (yAxis > 0)
-                Hit(upAttackTransform, upAttackArea, ref playerState.RecoilingY, recoilYSpeed);
-            else if (yAxis < 0 || !Grounded())
-                Hit(downAttackTransform, downAttackArea, ref playerState.RecoilingY, recoilYSpeed);
         }
+    }
+
+    void PlayAttackVFX()
+    {
+        if (attackVFX == null) return;
+
+        if (attackVFXRoutine != null)
+            StopCoroutine(attackVFXRoutine);
+
+        attackVFX.SetActive(true);
+        attackVFXRoutine = StartCoroutine(AttackVFXCooldown());
+    }
+
+    IEnumerator AttackVFXCooldown()
+    {
+        yield return new WaitForSeconds(attackVFXDuration);
+
+        if (attackVFX != null)
+            attackVFX.SetActive(false);
+
+        attackVFXRoutine = null;
     }
 
     void Recoil()
@@ -456,8 +533,17 @@ public class PlayerController : MonoBehaviour
         if (isDead) return;
 
         health -= Mathf.RoundToInt(_damage);
+
         ClampHealth();
         NotifyHealthChanged();
+
+        if (AudioService.Instance != null)
+        {
+            if (health <= 0)
+                AudioService.Instance.PlaySFX(SFXType.PlayerDeath);
+            else
+                AudioService.Instance.PlaySFX(SFXType.PlayerHurt);
+        }
 
         StartCoroutine(StopTakingDamage());
     }

@@ -85,6 +85,9 @@ public class Boxfish : Enemy
         {
             currentBubble = bp;
             bp.Initialize(playerTransform, this);
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.PlaySFX(SFXType.BoxfishBubble);
         }
     }
 

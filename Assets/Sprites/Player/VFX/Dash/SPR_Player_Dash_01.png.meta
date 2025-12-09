@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: ce1fe9f7835316b4d98626f8b7a345a8
+guid: 26141e3d435bb424d9e619fd8d9b5e73
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2024561660757491972
-    second: SPR_Bubble_Avanco_do_Tritao_0
+      213: -3491600652357782930
+    second: SPR_Player_Dash_01_0
+  - first:
+      213: 740723717622336369
+    second: SPR_Player_Dash_01_1
+  - first:
+      213: 3822536489634831577
+    second: SPR_Player_Dash_01_2
+  - first:
+      213: 2020054169848644218
+    second: SPR_Player_Dash_01_3
+  - first:
+      213: -3356137928343502900
+    second: SPR_Player_Dash_01_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_Bubble_Avanco_do_Tritao_0
+      name: SPR_Player_Dash_01_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 53
-        width: 384
-        height: 385
+        x: 34
+        y: 117
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40143579a10b81c10800000000000000
-      internalID: 2024561660757491972
+      spriteID: e6231bab4b75b8fc0800000000000000
+      internalID: -3491600652357782930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Dash_01_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 62
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b0691fb44974a00800000000000000
+      internalID: 740723717622336369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Dash_01_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 56
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc17a54fa06c0530800000000000000
+      internalID: 3822536489634831577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Dash_01_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 24
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7200e4909ca80c10800000000000000
+      internalID: 2020054169848644218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Player_Dash_01_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 22
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfbed3f55a9c61d0800000000000000
+      internalID: -3356137928343502900
       vertices: []
       indices: 
       edges: []
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SPR_Bubble_Avanco_do_Tritao_0: 2024561660757491972
+      SPR_Player_Dash_01_0: -3491600652357782930
+      SPR_Player_Dash_01_1: 740723717622336369
+      SPR_Player_Dash_01_2: 3822536489634831577
+      SPR_Player_Dash_01_3: 2020054169848644218
+      SPR_Player_Dash_01_4: -3356137928343502900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

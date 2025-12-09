@@ -3,13 +3,17 @@ using UnityEngine;
 public class BackgroundTrigger : MonoBehaviour
 {
     [SerializeField] private AreaID areaToSet;
+    [SerializeField] private MusicType musicToPlay;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.CompareTag("Player")) return;
-        if (BackgroundManager.Instance == null) return;
 
-        BackgroundManager.Instance.SetBackground(areaToSet);
+        if (BackgroundManager.Instance != null)
+            BackgroundManager.Instance.SetBackground(areaToSet);
+
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlayMusic(musicToPlay);
     }
 
     private void OnDrawGizmos()

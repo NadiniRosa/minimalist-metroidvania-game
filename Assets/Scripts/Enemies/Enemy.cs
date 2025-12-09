@@ -56,6 +56,9 @@ public class Enemy : MonoBehaviour
 
         health -= _damageDone;
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.EnemyHit);
+
         if (!isRecoiling)
         {
             rb.AddForce(-_hitForce * recoilFactor * _hitDirection);

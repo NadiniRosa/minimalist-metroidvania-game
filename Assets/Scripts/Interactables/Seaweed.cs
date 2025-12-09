@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class Seaweed : MonoBehaviour
 {
-    [SerializeField] private int health = 3;
+    [SerializeField] private int health = 1;
 
     private int hitsTaken = 0;
     private bool destroyed = false;
 
     private Animator animator;
+    private Collider2D[] colliders;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        colliders = GetComponents<Collider2D>();
     }
 
     public void Hit()
@@ -26,6 +28,9 @@ public class Seaweed : MonoBehaviour
 
             if (animator != null)
                 animator.SetBool("Destroyed", true);
+
+            foreach (var col in colliders)
+                col.enabled = false;
         }
     }
 }
