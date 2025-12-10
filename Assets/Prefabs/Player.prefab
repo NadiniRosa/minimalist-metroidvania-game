@@ -189,12 +189,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 5
+  maxHealth: 3
   walkSpeed: 20
   jumpForce: 35
   jumpBufferFrames: 8
   coyoteTime: 0.2
   maxAirJumps: 1
+  jumpSFXMinInterval: 0.2
   groundCheckPoint: {fileID: 9022512164277633938}
   groundCheckY: 0.2
   groundCheckX: 0.5
@@ -204,12 +205,16 @@ MonoBehaviour:
   dashSpeed: 70
   dashTime: 0.2
   dashCooldown: 0.35
+  dashSFXMinInterval: 0.1
+  timeBetweenAttack: 0.4
   damage: 2
   sideAttackTransform: {fileID: 4970087824056284117}
   sideAttackArea: {x: 2.5, y: 3.5}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
+  attackVFX: {fileID: 6054766708134868263}
+  attackVFXDuration: 0.25
   recoilXSteps: 3
   recoilYSteps: 3
   recoilXSpeed: 25
@@ -217,7 +222,6 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackVFX: {fileID: 6054766708134868263}
   playerState: {fileID: 0}
 --- !u!114 &3530212466220639523
 MonoBehaviour:

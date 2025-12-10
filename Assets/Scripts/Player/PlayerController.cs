@@ -476,7 +476,6 @@ public class PlayerController : MonoBehaviour
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
 
         List<Enemy> hitEnemies = new List<Enemy>();
-        List<FossilWall> hitWalls = new List<FossilWall>();
         List<Seaweed> hitSeaweeds = new List<Seaweed>();
         List<Sponges> hitSponges = new List<Sponges>();
         List<Checkpoint> hitCheckpoints = new List<Checkpoint>();
@@ -492,14 +491,6 @@ public class PlayerController : MonoBehaviour
             {
                 e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
                 hitEnemies.Add(e);
-            }
-
-            FossilWall wall = objectsToHit[i].GetComponent<FossilWall>();
-
-            if (wall && !hitWalls.Contains(wall))
-            {
-                wall.Hit();
-                hitWalls.Add(wall);
             }
 
             Seaweed seaweed = objectsToHit[i].GetComponent<Seaweed>();
@@ -604,6 +595,16 @@ public class PlayerController : MonoBehaviour
         ClampHealth();
         NotifyHealthChanged();
     }
+
+    public void AddHealth(int amount)
+    {
+        if (isDead) return;
+
+        health += amount;
+        ClampHealth();
+        NotifyHealthChanged();
+    }
+
 
     public void RespawnFromCheckpoint(Vector3 position, int savedHealth, int savedMaxHealth)
     {

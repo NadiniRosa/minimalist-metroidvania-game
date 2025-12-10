@@ -20,10 +20,11 @@ public class Checkpoint : MonoBehaviour
         alreadyActivated = true;
 
         GameManager.Instance.SaveCheckpoint(PlayerController.Instance.transform);
-        Debug.Log("Checkpoint activated!");
-
         UIManager.Instance.ShowCheckpointSaved();
 
         col.enabled = false;
+
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.Checkpoint);
     }
 }

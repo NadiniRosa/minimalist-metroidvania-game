@@ -13,7 +13,10 @@ public enum SFXType
     EnemyHit,
     BoxfishBubble,
     EelBiting,
-    PlayerDoubleJump
+    PlayerDoubleJump,
+    JellyfishTrampoline,
+    PropBreaking,
+    Checkpoint
 }
 
 public enum MusicType

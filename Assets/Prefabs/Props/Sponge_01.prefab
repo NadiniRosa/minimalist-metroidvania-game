@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  healthCollectablePrefab: {fileID: 7298825399320871577, guid: d7810aef841c06348be2ea1f3c7107e4, type: 3}
+  dropChance: 0.35

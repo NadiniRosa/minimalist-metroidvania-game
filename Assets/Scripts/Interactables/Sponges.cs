@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Sponges : MonoBehaviour
 {
-    [SerializeField] private int health = 3;
+    [Header("Sponge Health")]
+    [SerializeField] private int health = 1;
+
+    [Header("Health Drop Settings")]
+    [SerializeField] private GameObject healthCollectablePrefab;
+    [Range(0f, 1f)]
+    [SerializeField] private float dropChance = 0.25f;
 
     private int hitsTaken = 0;
     private bool destroyed = false;
@@ -26,10 +32,26 @@ public class Sponges : MonoBehaviour
         {
             destroyed = true;
 
+            TrySpawnHealthDrop();
+
             if (animator != null)
                 animator.SetBool("Destroyed", true);
 
-            col.enabled = false;
+            if (col != null)
+                col.enabled = false;
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.PlaySFX(SFXType.PropBreaking);
         }
+    }
+
+    private void TrySpawnHealthDrop()
+    {
+        if (healthCollectablePrefab == null) return;
+
+        float roll = Random.value;
+
+        if (roll <= dropChance)
+            Instantiate(healthCollectablePrefab, transform.position, Quaternion.identity);
     }
 }

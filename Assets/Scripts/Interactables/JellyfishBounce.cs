@@ -33,6 +33,9 @@ public class JellyfishBounce : MonoBehaviour
 
         if (animator != null)
             animator.SetBool("Bounce", true);
+
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.JellyfishTrampoline);
     }
 
     private void OnCollisionExit2D(Collision2D collision)

@@ -31,6 +31,21 @@ public class FossilWall : MonoBehaviour
 
             foreach (var col in colliders)
                 col.enabled = false;
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.PlaySFX(SFXType.PropBreaking);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (destroyed) return;
+
+        PlayerController player = collision.collider.GetComponent<PlayerController>();
+
+        if (player == null) return;
+
+        if (player.playerState != null && player.playerState.Dashing)
+            Hit();
     }
 }

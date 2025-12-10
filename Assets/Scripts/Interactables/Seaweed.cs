@@ -31,6 +31,9 @@ public class Seaweed : MonoBehaviour
 
             foreach (var col in colliders)
                 col.enabled = false;
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.PlaySFX(SFXType.PropBreaking);
         }
     }
 }
