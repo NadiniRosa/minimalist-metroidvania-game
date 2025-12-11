@@ -16,7 +16,8 @@ public enum SFXType
     PlayerDoubleJump,
     JellyfishTrampoline,
     PropBreaking,
-    Checkpoint
+    Checkpoint,
+    Button
 }
 
 public enum MusicType

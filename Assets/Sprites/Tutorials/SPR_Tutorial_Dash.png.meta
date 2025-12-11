@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: f77e9c7af4243e34791d0cc2cfee5e28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 605994400947757151
+    second: SPR_Tutorial_Dash_0
+  - first:
+      213: -2945674088594955795
+    second: SPR_Tutorial_Dash_1
+  - first:
+      213: -8447992215170376213
+    second: SPR_Tutorial_Dash_2
+  - first:
+      213: 4592370719394480854
+    second: SPR_Tutorial_Dash_3
+  - first:
+      213: 991956870830400302
+    second: SPR_Tutorial_Dash_4
+  - first:
+      213: 2437392451758633720
+    second: SPR_Tutorial_Dash_5
+  - first:
+      213: 2586236509247622562
+    second: SPR_Tutorial_Dash_6
+  - first:
+      213: -4797789673169584735
+    second: SPR_Tutorial_Dash_7
+  - first:
+      213: -3529330389113556150
+    second: SPR_Tutorial_Dash_8
+  - first:
+      213: -3540635220262932873
+    second: SPR_Tutorial_Dash_9
+  - first:
+      213: -6288854231275986555
+    second: SPR_Tutorial_Dash_10
+  - first:
+      213: -6587584940225873519
+    second: SPR_Tutorial_Dash_11
+  - first:
+      213: -7455154085500551564
+    second: SPR_Tutorial_Dash_12
+  - first:
+      213: -8443907694758610452
+    second: SPR_Tutorial_Dash_13
+  - first:
+      213: 16891120694965466
+    second: SPR_Tutorial_Dash_14
+  - first:
+      213: -863129667642061267
+    second: SPR_Tutorial_Dash_15
+  - first:
+      213: 980298830574621003
+    second: SPR_Tutorial_Dash_16
+  - first:
+      213: -6695957617918801848
+    second: SPR_Tutorial_Dash_17
+  - first:
+      213: -8372500655981951765
+    second: SPR_Tutorial_Dash_18
+  - first:
+      213: 1439308383808145824
+    second: SPR_Tutorial_Dash_19
+  - first:
+      213: -1943112780957282846
+    second: SPR_Tutorial_Dash_20
+  - first:
+      213: 1359786063162341885
+    second: SPR_Tutorial_Dash_21
+  - first:
+      213: 1629362705537555394
+    second: SPR_Tutorial_Dash_22
+  - first:
+      213: -4878504619741659348
+    second: SPR_Tutorial_Dash_23
+  - first:
+      213: -6871803043448349522
+    second: SPR_Tutorial_Dash_24
+  - first:
+      213: 6072124040160667625
+    second: SPR_Tutorial_Dash_25
+  - first:
+      213: 4856978485541346089
+    second: SPR_Tutorial_Dash_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_0
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 224
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50ed5c62bce86800800000000000000
+      internalID: 605994400947757151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_1
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 214
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1a935f50dde17d0800000000000000
+      internalID: -2945674088594955795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_2
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 96
+        width: 133
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed1185f6d3b2ca80800000000000000
+      internalID: -8447992215170376213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_3
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 105
+        width: 523
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2c96e76d06bbf30800000000000000
+      internalID: 4592370719394480854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 75
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23aa56b48324cd00800000000000000
+      internalID: 991956870830400302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_5
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 54
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2ba41658b53d120800000000000000
+      internalID: 2437392451758633720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_6
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 54
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adc9d6176824e320800000000000000
+      internalID: 2586236509247622562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_7
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 54
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad70b746b3da6db0800000000000000
+      internalID: -4797789673169584735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_8
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 75
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4335e5d5bc450fc0800000000000000
+      internalID: -3529330389113556150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 82
+        width: 50
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77eadf8b6032ddec0800000000000000
+      internalID: -3540635220262932873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_10
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 54
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581259c756089b8a0800000000000000
+      internalID: -6288854231275986555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_11
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 54
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199bf1e36623494a0800000000000000
+      internalID: -6587584940225873519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_12
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 54
+        width: 55
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47effebbbd8f98890800000000000000
+      internalID: -7455154085500551564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 54
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9b9b970b631da80800000000000000
+      internalID: -8443907694758610452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_14
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 54
+        width: 62
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4b1e082620c3000800000000000000
+      internalID: 16891120694965466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 54
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e081de32c8504f0800000000000000
+      internalID: -863129667642061267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_16
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 54
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b419122b798ba9d00800000000000000
+      internalID: 980298830574621003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_17
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 54
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84801e0f50e2313a0800000000000000
+      internalID: -6695957617918801848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_18
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 47
+        width: 62
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be488764307eecb80800000000000000
+      internalID: -8372500655981951765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_19
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 47
+        width: 86
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9402b695379f310800000000000000
+      internalID: 1439308383808145824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_20
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 54
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed0584883da805e0800000000000000
+      internalID: -1943112780957282846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_21
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 54
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df97151583eeed210800000000000000
+      internalID: 1359786063162341885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_22
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 47
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbd5d97fb8ac9610800000000000000
+      internalID: 1629362705537555394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_23
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 54
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f323155e11c4cb0800000000000000
+      internalID: -4878504619741659348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_24
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 26
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac10d45a8372a0a0800000000000000
+      internalID: -6871803043448349522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_25
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 26
+        width: 67
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7e2ed94a4844450800000000000000
+      internalID: 6072124040160667625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Dash_26
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 26
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b18600334776340800000000000000
+      internalID: 4856978485541346089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SPR_Tutorial_Dash_0: 605994400947757151
+      SPR_Tutorial_Dash_1: -2945674088594955795
+      SPR_Tutorial_Dash_10: -6288854231275986555
+      SPR_Tutorial_Dash_11: -6587584940225873519
+      SPR_Tutorial_Dash_12: -7455154085500551564
+      SPR_Tutorial_Dash_13: -8443907694758610452
+      SPR_Tutorial_Dash_14: 16891120694965466
+      SPR_Tutorial_Dash_15: -863129667642061267
+      SPR_Tutorial_Dash_16: 980298830574621003
+      SPR_Tutorial_Dash_17: -6695957617918801848
+      SPR_Tutorial_Dash_18: -8372500655981951765
+      SPR_Tutorial_Dash_19: 1439308383808145824
+      SPR_Tutorial_Dash_2: -8447992215170376213
+      SPR_Tutorial_Dash_20: -1943112780957282846
+      SPR_Tutorial_Dash_21: 1359786063162341885
+      SPR_Tutorial_Dash_22: 1629362705537555394
+      SPR_Tutorial_Dash_23: -4878504619741659348
+      SPR_Tutorial_Dash_24: -6871803043448349522
+      SPR_Tutorial_Dash_25: 6072124040160667625
+      SPR_Tutorial_Dash_26: 4856978485541346089
+      SPR_Tutorial_Dash_3: 4592370719394480854
+      SPR_Tutorial_Dash_4: 991956870830400302
+      SPR_Tutorial_Dash_5: 2437392451758633720
+      SPR_Tutorial_Dash_6: 2586236509247622562
+      SPR_Tutorial_Dash_7: -4797789673169584735
+      SPR_Tutorial_Dash_8: -3529330389113556150
+      SPR_Tutorial_Dash_9: -3540635220262932873
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainRenderer: {fileID: 8746581642736316499}
   fadeRenderer: {fileID: 1395355754392078090}
-  fadeDuration: 1
+  fadeDuration: 0.5
   backgroundList:
   - area: 0
     backgroundSprite: {fileID: 21300000, guid: c0fe2359c509d0d48954207cc9b16d0a, type: 3}

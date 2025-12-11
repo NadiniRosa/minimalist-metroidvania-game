@@ -161,3 +161,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnCollect: 1
+  tutorialSprite: {fileID: 21300000, guid: f77e9c7af4243e34791d0cc2cfee5e28, type: 3}
+  showTutorial: 1

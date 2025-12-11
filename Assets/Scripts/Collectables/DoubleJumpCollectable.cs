@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class DoubleJumpCollectable : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] private bool destroyOnCollect = true;
+
+    [Header("Tutorial")]
+    [SerializeField] private Sprite tutorialSprite;
+    [SerializeField] private bool showTutorial = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -10,6 +15,9 @@ public class DoubleJumpCollectable : MonoBehaviour
 
         if (GameManager.Instance != null)
             GameManager.Instance.DoubleJumpUnlocked = true;
+
+        if (showTutorial && TutorialManager.Instance != null && tutorialSprite != null)
+            TutorialManager.Instance.ShowTutorial(tutorialSprite);
 
         if (destroyOnCollect)
             Destroy(gameObject);

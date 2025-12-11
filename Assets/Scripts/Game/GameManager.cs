@@ -7,15 +7,19 @@ public class GameManager : MonoBehaviour
     [Header("Player Abilities Unlocked")]
     public bool DashUnlocked = false;
     public bool DoubleJumpUnlocked = false;
+    public bool LightUnlocked = false;
 
     private bool hasSave = false;
     public bool HasCheckpoint => hasSave;
 
     private Vector3 savedPosition;
+    
     private int savedHealth;
     private int savedMaxHealth;
+
     private bool savedDashUnlocked;
     private bool savedDoubleJumpUnlocked;
+    private bool savedLightUnlocked;
 
     private void Awake()
     {
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
 
         savedDashUnlocked = DashUnlocked;
         savedDoubleJumpUnlocked = DoubleJumpUnlocked;
+        savedLightUnlocked = LightUnlocked;
 
         Debug.Log("Checkpoint saved at position " + savedPosition);
 
@@ -66,11 +71,8 @@ public class GameManager : MonoBehaviour
 
         DashUnlocked = savedDashUnlocked;
         DoubleJumpUnlocked = savedDoubleJumpUnlocked;
+        LightUnlocked = savedLightUnlocked;
 
-        PlayerController.Instance.RespawnFromCheckpoint(
-            savedPosition,
-            savedHealth,
-            savedMaxHealth
-        );
+        PlayerController.Instance.RespawnFromCheckpoint(savedPosition, savedHealth, savedMaxHealth);
     }
 }

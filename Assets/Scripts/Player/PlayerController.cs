@@ -128,6 +128,17 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsAlive()) return;
 
+        if (TutorialManager.Instance != null && TutorialManager.Instance.TutorialOpen)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            animator.SetBool("Walking", false);
+
+            if (AudioService.Instance != null)
+                AudioService.Instance.StopLoop(SFXType.PlayerMovement);
+
+            return;
+        }
+
         GetInputs();
         UpdateJumpVariables();
 
