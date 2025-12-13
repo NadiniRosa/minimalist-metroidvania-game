@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -7,10 +8,16 @@ public class TutorialManager : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] private GameObject panelRoot;
+    [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Image backgroundImage;
     [SerializeField] private Button closeButton;
 
+    [Header("Fade Settings")]
+    [SerializeField] private float fadeDuration = 0.25f;
+
     public bool TutorialOpen { get; private set; }
+
+    private Coroutine fadeRoutine;
 
     private void Awake()
     {
@@ -20,26 +27,34 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        if (panelRoot != null)
-            panelRoot.SetActive(false);
-
         TutorialOpen = false;
 
         if (closeButton != null)
             closeButton.onClick.AddListener(CloseTutorial);
+
+        if (panelRoot != null)
+            panelRoot.SetActive(false);
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
     }
 
     public void ShowTutorial(Sprite sprite)
     {
-        if (panelRoot == null || backgroundImage == null)
+        if (panelRoot == null || canvasGroup == null || backgroundImage == null)
         {
-            Debug.LogWarning("TutorialManager: panelRoot or backgroundImage not assigned!");
+            Debug.LogWarning("TutorialManager: panelRoot / canvasGroup / backgroundImage not assigned!");
             return;
         }
 
@@ -47,22 +62,54 @@ public class TutorialManager : MonoBehaviour
         backgroundImage.enabled = (sprite != null);
 
         panelRoot.SetActive(true);
-
         TutorialOpen = true;
 
-        Debug.Log("TutorialManager: ShowTutorial called with sprite: "
-                  + (sprite != null ? sprite.name : "NULL"));
+        StartFade(1f, makeInteractiveAtEnd: true, disableRootAtEnd: false);
     }
 
     public void CloseTutorial()
     {
-        if (panelRoot == null)
-            return;
+        if (panelRoot == null || canvasGroup == null) return;
+        if (!TutorialOpen) return;
 
-        panelRoot.SetActive(false);
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.Button);
 
         TutorialOpen = false;
 
-        Debug.Log("TutorialManager: CloseTutorial called");
+        StartFade(0f, makeInteractiveAtEnd: false, disableRootAtEnd: true);
+    }
+
+    private void StartFade(float targetAlpha, bool makeInteractiveAtEnd, bool disableRootAtEnd)
+    {
+        if (fadeRoutine != null)
+            StopCoroutine(fadeRoutine);
+
+        fadeRoutine = StartCoroutine(FadeRoutine(targetAlpha, makeInteractiveAtEnd, disableRootAtEnd));
+    }
+
+    private IEnumerator FadeRoutine(float targetAlpha, bool makeInteractiveAtEnd, bool disableRootAtEnd)
+    {
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        float startAlpha = canvasGroup.alpha;
+        float t = 0f;
+
+        while (t < fadeDuration)
+        {
+            t += Time.unscaledDeltaTime;
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, t / fadeDuration);
+            yield return null;
+        }
+
+        canvasGroup.alpha = targetAlpha;
+        canvasGroup.interactable = makeInteractiveAtEnd;
+        canvasGroup.blocksRaycasts = makeInteractiveAtEnd;
+
+        fadeRoutine = null;
+
+        if (disableRootAtEnd && panelRoot != null)
+            panelRoot.SetActive(false);
     }
 }

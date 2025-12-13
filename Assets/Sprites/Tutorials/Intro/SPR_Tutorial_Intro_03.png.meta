@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 9615040e6ed878c4e9dc7671d1a36d2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8818777895139420258
+    second: SPR_Tutorial_Intro_03_0
+  - first:
+      213: 724709638395386140
+    second: SPR_Tutorial_Intro_03_1
+  - first:
+      213: -1168775729682216234
+    second: SPR_Tutorial_Intro_03_2
+  - first:
+      213: -3994030948437794858
+    second: SPR_Tutorial_Intro_03_3
+  - first:
+      213: 5310307917256853550
+    second: SPR_Tutorial_Intro_03_4
+  - first:
+      213: 2027638328414596284
+    second: SPR_Tutorial_Intro_03_5
+  - first:
+      213: -5432716175956807243
+    second: SPR_Tutorial_Intro_03_6
+  - first:
+      213: 4798054454311005124
+    second: SPR_Tutorial_Intro_03_7
+  - first:
+      213: -862673763323489390
+    second: SPR_Tutorial_Intro_03_8
+  - first:
+      213: -8937694497160587160
+    second: SPR_Tutorial_Intro_03_9
+  - first:
+      213: -6895037453402580868
+    second: SPR_Tutorial_Intro_03_10
+  - first:
+      213: 213019993919380741
+    second: SPR_Tutorial_Intro_03_11
+  - first:
+      213: -2349550762171839808
+    second: SPR_Tutorial_Intro_03_12
+  - first:
+      213: 2939645145279896701
+    second: SPR_Tutorial_Intro_03_13
+  - first:
+      213: -2836416105966040938
+    second: SPR_Tutorial_Intro_03_14
+  - first:
+      213: 7893531546586373034
+    second: SPR_Tutorial_Intro_03_15
+  - first:
+      213: 4548441388773536598
+    second: SPR_Tutorial_Intro_03_16
+  - first:
+      213: 4594720410960188340
+    second: SPR_Tutorial_Intro_03_17
+  - first:
+      213: 3292546901478341542
+    second: SPR_Tutorial_Intro_03_18
+  - first:
+      213: -3124965248096918269
+    second: SPR_Tutorial_Intro_03_19
+  - first:
+      213: 8120217219781829017
+    second: SPR_Tutorial_Intro_03_20
+  - first:
+      213: 4642401978124997416
+    second: SPR_Tutorial_Intro_03_21
+  - first:
+      213: 2977081115591358523
+    second: SPR_Tutorial_Intro_03_22
+  - first:
+      213: 7174172187810615562
+    second: SPR_Tutorial_Intro_03_23
+  - first:
+      213: 7285500011056609747
+    second: SPR_Tutorial_Intro_03_24
+  - first:
+      213: -7521426275890222980
+    second: SPR_Tutorial_Intro_03_25
+  - first:
+      213: -1526156040956124865
+    second: SPR_Tutorial_Intro_03_26
+  - first:
+      213: -5948685561466618658
+    second: SPR_Tutorial_Intro_03_27
+  - first:
+      213: -2220437830727704426
+    second: SPR_Tutorial_Intro_03_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 113
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97d52f6a386d9580800000000000000
+      internalID: -8818777895139420258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 113
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19dbd1939fae0a00800000000000000
+      internalID: 724709638395386140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 113
+        width: 55
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da81329aaca7cfe0800000000000000
+      internalID: -1168775729682216234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 106
+        width: 127
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfd270830a5298c0800000000000000
+      internalID: -3994030948437794858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_4
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 113
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e280a006ae002b940800000000000000
+      internalID: 5310307917256853550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 113
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc6e1a115e932c10800000000000000
+      internalID: 2027638328414596284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 113
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b17396fb6d1b94b0800000000000000
+      internalID: -5432716175956807243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 113
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb2032ea1d169240800000000000000
+      internalID: 4798054454311005124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_8
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 110
+        width: 78
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293dd0c68ca2704f0800000000000000
+      internalID: -862673763323489390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_9
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 106
+        width: 51
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86897c1753ee6f380800000000000000
+      internalID: -8937694497160587160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_10
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 113
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78dce4b7f7ef40a0800000000000000
+      internalID: -6895037453402580868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_11
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 113
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dde9b4e8cc4f200800000000000000
+      internalID: 213019993919380741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 113
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cacffeb708b46fd0800000000000000
+      internalID: -2349550762171839808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 113
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c1c1a4fa7bbc820800000000000000
+      internalID: 2939645145279896701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_14
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 113
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69882b0649603a8d0800000000000000
+      internalID: -2836416105966040938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_15
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 113
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aabde91be157b8d60800000000000000
+      internalID: 7893531546586373034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_16
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 113
+        width: 51
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653f78b285f4f1f30800000000000000
+      internalID: 4548441388773536598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_17
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 110
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3d481bed9b3cf30800000000000000
+      internalID: 4594720410960188340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_18
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 113
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6abfde456f971bd20800000000000000
+      internalID: 3292546901478341542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_19
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 113
+        width: 69
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3052eb3e9a4e1a4d0800000000000000
+      internalID: -3124965248096918269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_20
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 113
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9912b14e98ec0b070800000000000000
+      internalID: 8120217219781829017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_21
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 113
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82316baa0002d6040800000000000000
+      internalID: 4642401978124997416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_22
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 113
+        width: 109
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38b85a5087b05920800000000000000
+      internalID: 2977081115591358523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_23
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 113
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0150fb2897cf8360800000000000000
+      internalID: 7174172187810615562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_24
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 113
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9322ae8ab4b1560800000000000000
+      internalID: 7285500011056609747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_25
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 106
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78264df6a68e9790800000000000000
+      internalID: -7521426275890222980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_26
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 113
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f316efaaa2102dae0800000000000000
+      internalID: -1526156040956124865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_27
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 75
+        width: 57
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc7944dff5027da0800000000000000
+      internalID: -5948685561466618658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Intro_03_28
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 83
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690e2adae8b6f21e0800000000000000
+      internalID: -2220437830727704426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SPR_Tutorial_Intro_03_0: -8818777895139420258
+      SPR_Tutorial_Intro_03_1: 724709638395386140
+      SPR_Tutorial_Intro_03_10: -6895037453402580868
+      SPR_Tutorial_Intro_03_11: 213019993919380741
+      SPR_Tutorial_Intro_03_12: -2349550762171839808
+      SPR_Tutorial_Intro_03_13: 2939645145279896701
+      SPR_Tutorial_Intro_03_14: -2836416105966040938
+      SPR_Tutorial_Intro_03_15: 7893531546586373034
+      SPR_Tutorial_Intro_03_16: 4548441388773536598
+      SPR_Tutorial_Intro_03_17: 4594720410960188340
+      SPR_Tutorial_Intro_03_18: 3292546901478341542
+      SPR_Tutorial_Intro_03_19: -3124965248096918269
+      SPR_Tutorial_Intro_03_2: -1168775729682216234
+      SPR_Tutorial_Intro_03_20: 8120217219781829017
+      SPR_Tutorial_Intro_03_21: 4642401978124997416
+      SPR_Tutorial_Intro_03_22: 2977081115591358523
+      SPR_Tutorial_Intro_03_23: 7174172187810615562
+      SPR_Tutorial_Intro_03_24: 7285500011056609747
+      SPR_Tutorial_Intro_03_25: -7521426275890222980
+      SPR_Tutorial_Intro_03_26: -1526156040956124865
+      SPR_Tutorial_Intro_03_27: -5948685561466618658
+      SPR_Tutorial_Intro_03_28: -2220437830727704426
+      SPR_Tutorial_Intro_03_3: -3994030948437794858
+      SPR_Tutorial_Intro_03_4: 5310307917256853550
+      SPR_Tutorial_Intro_03_5: 2027638328414596284
+      SPR_Tutorial_Intro_03_6: -5432716175956807243
+      SPR_Tutorial_Intro_03_7: 4798054454311005124
+      SPR_Tutorial_Intro_03_8: -862673763323489390
+      SPR_Tutorial_Intro_03_9: -8937694497160587160
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

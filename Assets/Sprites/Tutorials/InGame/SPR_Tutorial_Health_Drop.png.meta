@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 331a2483f5722184491a5060b341aa2a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3702471635966102689
+    second: SPR_Tutorial_Health_Drop_0
+  - first:
+      213: 8547453958977762112
+    second: SPR_Tutorial_Health_Drop_1
+  - first:
+      213: -3266272311600506341
+    second: SPR_Tutorial_Health_Drop_2
+  - first:
+      213: -741812488777309575
+    second: SPR_Tutorial_Health_Drop_3
+  - first:
+      213: -8375783388291558935
+    second: SPR_Tutorial_Health_Drop_4
+  - first:
+      213: -2224938831569985954
+    second: SPR_Tutorial_Health_Drop_5
+  - first:
+      213: -7679681194473295296
+    second: SPR_Tutorial_Health_Drop_6
+  - first:
+      213: 556873844119256164
+    second: SPR_Tutorial_Health_Drop_7
+  - first:
+      213: -3148074797252732269
+    second: SPR_Tutorial_Health_Drop_8
+  - first:
+      213: 5321507736746548698
+    second: SPR_Tutorial_Health_Drop_9
+  - first:
+      213: -5010702860211247055
+    second: SPR_Tutorial_Health_Drop_10
+  - first:
+      213: -50450171635171329
+    second: SPR_Tutorial_Health_Drop_11
+  - first:
+      213: -8364060927841470873
+    second: SPR_Tutorial_Health_Drop_12
+  - first:
+      213: 1208736788933916654
+    second: SPR_Tutorial_Health_Drop_13
+  - first:
+      213: 7679305463318069945
+    second: SPR_Tutorial_Health_Drop_14
+  - first:
+      213: 6822298310421934640
+    second: SPR_Tutorial_Health_Drop_15
+  - first:
+      213: -1407153882216427047
+    second: SPR_Tutorial_Health_Drop_16
+  - first:
+      213: -3851201802427679255
+    second: SPR_Tutorial_Health_Drop_17
+  - first:
+      213: -6403753604661905280
+    second: SPR_Tutorial_Health_Drop_18
+  - first:
+      213: 2078661415566210871
+    second: SPR_Tutorial_Health_Drop_19
+  - first:
+      213: -1253278777561822993
+    second: SPR_Tutorial_Health_Drop_20
+  - first:
+      213: 5662468281266787898
+    second: SPR_Tutorial_Health_Drop_21
+  - first:
+      213: -3174706202640737292
+    second: SPR_Tutorial_Health_Drop_22
+  - first:
+      213: 5523774833537828075
+    second: SPR_Tutorial_Health_Drop_23
+  - first:
+      213: -2084796882643347682
+    second: SPR_Tutorial_Health_Drop_24
+  - first:
+      213: -7043483336265456443
+    second: SPR_Tutorial_Health_Drop_25
+  - first:
+      213: 6815076660287726883
+    second: SPR_Tutorial_Health_Drop_26
+  - first:
+      213: 7916480150009793232
+    second: SPR_Tutorial_Health_Drop_27
+  - first:
+      213: 4963263261639032739
+    second: SPR_Tutorial_Health_Drop_28
+  - first:
+      213: 8778280050483838829
+    second: SPR_Tutorial_Health_Drop_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_0
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 139
+        width: 175
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac08bc1652d16330800000000000000
+      internalID: 3702471635966102689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_1
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 142
+        width: 86
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04330eed618ae9670800000000000000
+      internalID: 8547453958977762112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_2
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 177
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a9b5753aedba2d0800000000000000
+      internalID: -3266272311600506341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_3
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 139
+        width: 64
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972ea74c87d84b5f0800000000000000
+      internalID: -741812488777309575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_4
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 89
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e19349926d33cb80800000000000000
+      internalID: -8375783388291558935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 89
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e5c41cbed6f11e0800000000000000
+      internalID: -2224938831569985954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 89
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042fb2f64aa4c6590800000000000000
+      internalID: -7679681194473295296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 89
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c3f6f8fc96ab700800000000000000
+      internalID: 556873844119256164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 89
+        width: 60
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a146fa6aacf44d0800000000000000
+      internalID: -3148074797252732269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_9
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 89
+        width: 101
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add554e871bc9d940800000000000000
+      internalID: 5321507736746548698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_10
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 89
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1382316eb48667ab0800000000000000
+      internalID: -5010702860211247055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 89
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffff3d016d3cc4ff0800000000000000
+      internalID: -50450171635171329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_12
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 89
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766f84c96e2eceb80800000000000000
+      internalID: -8364060927841470873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_13
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 89
+        width: 54
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee73a5394bb46c010800000000000000
+      internalID: 1208736788933916654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_14
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 89
+        width: 65
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b24ac6d1af529a60800000000000000
+      internalID: 7679305463318069945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_15
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 89
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0327270da2cadae50800000000000000
+      internalID: 6822298310421934640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_16
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 89
+        width: 37
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d19d22eff8c87ce0800000000000000
+      internalID: -1407153882216427047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_17
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 86
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed34ff7d58cd8ac0800000000000000
+      internalID: -3851201802427679255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_18
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 89
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088fffc660c4127a0800000000000000
+      internalID: -6403753604661905280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_19
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 89
+        width: 60
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73772235b83e8dc10800000000000000
+      internalID: 2078661415566210871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_20
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 89
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe844ea87957b9ee0800000000000000
+      internalID: -1253278777561822993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_21
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 89
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36d2d896e0259e40800000000000000
+      internalID: 5662468281266787898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 89
+        width: 58
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb9e5d678d21f3d0800000000000000
+      internalID: -3174706202640737292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_23
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 62
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4c344e1f368ac40800000000000000
+      internalID: 5523774833537828075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_24
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 62
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17933de7405113e0800000000000000
+      internalID: -2084796882643347682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_25
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 61
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4a3804935804e90800000000000000
+      internalID: -7043483336265456443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_26
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 62
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325618d5d14049e50800000000000000
+      internalID: 6815076660287726883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_27
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 54
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dac3ccc0ccfcdd60800000000000000
+      internalID: 7916480150009793232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_28
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 62
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afbdb4d3ad01e440800000000000000
+      internalID: 4963263261639032739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Tutorial_Health_Drop_29
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 62
+        width: 52
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fbcf35237b2d970800000000000000
+      internalID: 8778280050483838829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SPR_Tutorial_Health_Drop_0: 3702471635966102689
+      SPR_Tutorial_Health_Drop_1: 8547453958977762112
+      SPR_Tutorial_Health_Drop_10: -5010702860211247055
+      SPR_Tutorial_Health_Drop_11: -50450171635171329
+      SPR_Tutorial_Health_Drop_12: -8364060927841470873
+      SPR_Tutorial_Health_Drop_13: 1208736788933916654
+      SPR_Tutorial_Health_Drop_14: 7679305463318069945
+      SPR_Tutorial_Health_Drop_15: 6822298310421934640
+      SPR_Tutorial_Health_Drop_16: -1407153882216427047
+      SPR_Tutorial_Health_Drop_17: -3851201802427679255
+      SPR_Tutorial_Health_Drop_18: -6403753604661905280
+      SPR_Tutorial_Health_Drop_19: 2078661415566210871
+      SPR_Tutorial_Health_Drop_2: -3266272311600506341
+      SPR_Tutorial_Health_Drop_20: -1253278777561822993
+      SPR_Tutorial_Health_Drop_21: 5662468281266787898
+      SPR_Tutorial_Health_Drop_22: -3174706202640737292
+      SPR_Tutorial_Health_Drop_23: 5523774833537828075
+      SPR_Tutorial_Health_Drop_24: -2084796882643347682
+      SPR_Tutorial_Health_Drop_25: -7043483336265456443
+      SPR_Tutorial_Health_Drop_26: 6815076660287726883
+      SPR_Tutorial_Health_Drop_27: 7916480150009793232
+      SPR_Tutorial_Health_Drop_28: 4963263261639032739
+      SPR_Tutorial_Health_Drop_29: 8778280050483838829
+      SPR_Tutorial_Health_Drop_3: -741812488777309575
+      SPR_Tutorial_Health_Drop_4: -8375783388291558935
+      SPR_Tutorial_Health_Drop_5: -2224938831569985954
+      SPR_Tutorial_Health_Drop_6: -7679681194473295296
+      SPR_Tutorial_Health_Drop_7: 556873844119256164
+      SPR_Tutorial_Health_Drop_8: -3148074797252732269
+      SPR_Tutorial_Health_Drop_9: 5321507736746548698
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

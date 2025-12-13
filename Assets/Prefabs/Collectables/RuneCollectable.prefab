@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6176847717050606128}
   - component: {fileID: 5911259919781610779}
   - component: {fileID: 8948028306703175553}
+  - component: {fileID: 3716924250432165054}
   m_Layer: 0
   m_Name: RuneCollectable
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2157118640351418815, guid: 994e6d302074e8843986e3b895fbfcba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 994e6d302074e8843986e3b895fbfcba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -147,3 +148,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.25
+--- !u!114 &3716924250432165054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509761711324830360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cdc8ea0c16f0644ae6a1cdffcfd416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  destroyOnCollect: 1
+  counter: {fileID: 0}

@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     public bool DashUnlocked = false;
     public bool DoubleJumpUnlocked = false;
     public bool LightUnlocked = false;
+    
+    [Header("Runes")]
+    public int Runes = 0;
+    private int savedRunes;
 
     private bool hasSave = false;
     public bool HasCheckpoint => hasSave;
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
         savedDashUnlocked = DashUnlocked;
         savedDoubleJumpUnlocked = DoubleJumpUnlocked;
         savedLightUnlocked = LightUnlocked;
+        savedRunes = Runes;
 
         Debug.Log("Checkpoint saved at position " + savedPosition);
 
@@ -72,6 +77,7 @@ public class GameManager : MonoBehaviour
         DashUnlocked = savedDashUnlocked;
         DoubleJumpUnlocked = savedDoubleJumpUnlocked;
         LightUnlocked = savedLightUnlocked;
+        Runes = savedRunes;
 
         PlayerController.Instance.RespawnFromCheckpoint(savedPosition, savedHealth, savedMaxHealth);
     }

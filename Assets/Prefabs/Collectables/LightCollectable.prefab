@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6176847717050606128}
   - component: {fileID: 5911259919781610779}
   - component: {fileID: 8948028306703175553}
+  - component: {fileID: 3973194592282107946}
   m_Layer: 0
   m_Name: LightCollectable
   m_TagString: Untagged
@@ -147,3 +148,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.25
+--- !u!114 &3973194592282107946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509761711324830360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a44fcd0f9fa9534ba7b7f8a9fcc7ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnCollect: 1
+  tutorialSprite: {fileID: 21300000, guid: 42fa548a1030370439c8d993a43d022e, type: 3}
+  showTutorial: 1
