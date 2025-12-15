@@ -48,6 +48,10 @@ public class AudioService : MonoBehaviour
     [Header("Music List")]
     [SerializeField] private List<MusicEntry> musicList = new List<MusicEntry>();
 
+    [Header("Start Music")]
+    [SerializeField] private bool playOnStart = true;
+    [SerializeField] private MusicType startMusic = MusicType.Area01;
+
     private Coroutine musicFadeRoutine;
 
     [System.Serializable]
@@ -102,6 +106,12 @@ public class AudioService : MonoBehaviour
         sfxSource.volume = 1f;
 
         BuildDictionaries();
+    }
+
+    private void Start()
+    {
+        if (playOnStart)
+            PlayMusic(startMusic);
     }
 
     private void BuildDictionaries()

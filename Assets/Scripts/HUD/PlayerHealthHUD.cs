@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerHealthHUD : MonoBehaviour
 {
+    public static PlayerHealthHUD Instance;
+
     [SerializeField] private PlayerController player;
     [SerializeField] private List<Image> barImages = new List<Image>();
 
@@ -14,6 +16,15 @@ public class PlayerHealthHUD : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         if (player == null && PlayerController.Instance != null)
             player = PlayerController.Instance;
 
@@ -24,7 +35,7 @@ public class PlayerHealthHUD : MonoBehaviour
         }
     }
 
-    private void UpdateHealthBars()
+    public void UpdateHealthBars()
     {
         if (player == null) return;
 

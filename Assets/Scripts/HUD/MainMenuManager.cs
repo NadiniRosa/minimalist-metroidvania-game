@@ -21,15 +21,22 @@ public class MainMenuManager : MonoBehaviour
 
     private void StartGame()
     {
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.Button);
+
         SceneManager.LoadScene("Testing");
     }
     
     private void ShowCredits()
     {
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.Button);
+
         isCreditsEnabled = !isCreditsEnabled;
 
         if (isCreditsEnabled)
         {
+
             creditsGroup.alpha = 1f;
             creditsGroup.interactable = true;
             creditsGroup.blocksRaycasts = true;

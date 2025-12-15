@@ -20,6 +20,10 @@ public class Checkpoint : MonoBehaviour
         alreadyActivated = true;
 
         GameManager.Instance.SaveCheckpoint(PlayerController.Instance.transform);
+
+        PlayerController.Instance.health = PlayerController.Instance.maxHealth;
+        PlayerController.Instance.NotifyHealthChanged();
+
         UIManager.Instance.ShowCheckpointSaved();
 
         col.enabled = false;

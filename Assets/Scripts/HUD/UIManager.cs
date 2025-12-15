@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button loadCheckpointButton;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
+    [Header("Thanks")]
+    [SerializeField] private Button backToMenuButton;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -44,6 +47,16 @@ public class UIManager : MonoBehaviour
         }
 
         RefreshGameOverButtons();
+
+        backToMenuButton.onClick.AddListener(HandleBackToMenu);
+    }
+
+    private void HandleBackToMenu()
+    {
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.Button);
+
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ShowCheckpointSaved()

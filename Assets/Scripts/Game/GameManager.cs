@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
 
         if (UIManager.Instance != null)
             UIManager.Instance.RefreshGameOverButtons();
+
+        if (PlayerHealthHUD.Instance != null)
+            PlayerHealthHUD.Instance.UpdateHealthBars();
     }
 
     public void LoadFromCheckpoint()
