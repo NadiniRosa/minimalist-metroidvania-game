@@ -53,6 +53,9 @@ public class LionFish : Enemy
     private Vector3 spawnPos;
     private bool returningToSpawn = false;
 
+    [SerializeField] private Collider2D thornsHitbox;
+    private bool thornsActive = false;
+
     protected override void Start()
     {
         base.Start();
@@ -199,11 +202,16 @@ public class LionFish : Enemy
 
     private void SetThornsCollider(bool thornsOn)
     {
+        thornsActive = thornsOn;
+
         if (box != null)
             box.size = thornsOn ? thornsBoxSize : normalBoxSize;
 
         if (circle != null)
             circle.radius = thornsOn ? thornsCircleRadius : normalCircleRadius;
+
+        if (thornsHitbox != null)
+            thornsHitbox.enabled = thornsOn;
     }
 
     public void Thorns_Start() => SetThornsCollider(true);
@@ -358,5 +366,65 @@ public class LionFish : Enemy
 
         Transform target = (PlayerController.Instance != null) ? PlayerController.Instance.transform : null;
         b.GetComponent<BouncingBubbleProjectile>()?.Initialize(target);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (isDead) return;
+        if (!thornsActive) return;
+
+        if (other.CompareTag("Player") &&
+            !PlayerController.Instance.playerState.Invincible &&
+            !PlayerController.Instance.IsDead)
+        {
+            Attack();
+        }
+    }
+
+    public void ResetToPhase1()
+    {
+        isDead = false;
+        health = maxHealth;
+        inPhase2 = false;
+        bubbleLoopRunning = false;
+
+        CancelInvoke();
+        StopBubbleLoop();
+
+        canMove = true;
+        followTimer = 0f;
+        returningToSpawn = false;
+        playerInArena = false;
+
+        SetThornsCollider(false);
+
+        if (rb != null)
+        {
+            rb.simulated = true;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
+
+        foreach (var col in GetComponents<Collider2D>())
+            col.enabled = true;
+
+        transform.position = spawnPos;
+
+        bossHealthUI?.Hide();
+        bossHealthUI?.SetFill(health, maxHealth);
+
+        if (thanksFadeRoutine != null) StopCoroutine(thanksFadeRoutine);
+        if (thanksCanvasGroup != null)
+        {
+            thanksCanvasGroup.alpha = 0f;
+            thanksCanvasGroup.interactable = false;
+            thanksCanvasGroup.blocksRaycasts = false;
+        }
+
+        if (animator != null)
+        {
+            animator.Rebind();
+            animator.Update(0f);
+        }
     }
 }

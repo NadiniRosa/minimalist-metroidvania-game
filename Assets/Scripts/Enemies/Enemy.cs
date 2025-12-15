@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected void OnTriggerStay2D(Collider2D _other)
+    public virtual void OnTriggerStay2D(Collider2D _other)
     {
         if (isDead) return;
 

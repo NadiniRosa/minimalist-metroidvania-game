@@ -175,6 +175,9 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Death");
             GameManager.Instance.PlayerDied();
 
+            AudioService.Instance?.StopAllExceptMusic();
+            AudioService.Instance?.PlaySFX(SFXType.PlayerDeath);
+
             return false;
         }
 

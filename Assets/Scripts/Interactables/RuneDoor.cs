@@ -65,10 +65,10 @@ public class RuneDoor : MonoBehaviour
         if (triggerCollider != null) triggerCollider.enabled = false;
         if (solidCollider != null) solidCollider.enabled = false;
 
-        EnableLightsUnderRoot();
-
         unlocked = true;
         unlocking = false;
+
+        EnableLightsUnderRoot();
     }
 
     private void EnableLightsUnderRoot()

@@ -83,5 +83,8 @@ public class GameManager : MonoBehaviour
         Runes = savedRunes;
 
         PlayerController.Instance.RespawnFromCheckpoint(savedPosition, savedHealth, savedMaxHealth);
+
+        foreach (var boss in FindObjectsOfType<LionFish>(true)) 
+            boss.ResetToPhase1();
     }
 }

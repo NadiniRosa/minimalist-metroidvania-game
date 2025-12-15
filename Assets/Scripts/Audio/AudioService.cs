@@ -270,4 +270,31 @@ public class AudioService : MonoBehaviour
         musicSource.clip = null;
         musicFadeRoutine = null;
     }
+
+    public void StopAllExceptMusic()
+    {
+        if (sfxSource != null)
+        {
+            sfxSource.Stop();
+            sfxSource.loop = false;
+        }
+
+        if (sfxLoopSource != null)
+        {
+            sfxLoopSource.Stop();
+            sfxLoopSource.clip = null;
+            sfxLoopSource.loop = false;
+        }
+
+        var all = FindObjectsOfType<AudioSource>(true);
+        foreach (var src in all)
+        {
+            if (src == null) continue;
+            if (musicSource != null && src == musicSource) continue;
+
+            src.Stop();
+            src.loop = false;
+        }
+    }
+
 }
