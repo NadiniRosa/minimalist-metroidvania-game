@@ -19,6 +19,9 @@ public class DoubleJumpCollectable : MonoBehaviour
         if (showTutorial && TutorialManager.Instance != null && tutorialSprite != null)
             TutorialManager.Instance.ShowTutorial(tutorialSprite);
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.PowerUp);
+
         if (destroyOnCollect)
             Destroy(gameObject);
     }

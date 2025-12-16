@@ -48,6 +48,9 @@ public class RuneDoor : MonoBehaviour
 
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.RuneDoor);
+
         if (placeRuneSprites != null && placeRuneSprites.Length > 0 && spriteRenderer != null)
         {
             int count = Mathf.Min(3, placeRuneSprites.Length);

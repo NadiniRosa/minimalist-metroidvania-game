@@ -23,6 +23,7 @@ public class LightGroupUnlockToggle : MonoBehaviour
     private void Update()
     {
         bool unlocked = GameManager.Instance != null && GameManager.Instance.LightUnlocked;
+
         if (unlocked != lastUnlocked)
             Apply(unlocked);
     }

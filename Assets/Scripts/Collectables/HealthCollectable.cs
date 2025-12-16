@@ -18,6 +18,9 @@ public class HealthCollectable : MonoBehaviour
 
         player.AddHealth(healthAmount);
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.HealthCollected);
+
         if (destroyOnCollect)
             Destroy(gameObject);
     }

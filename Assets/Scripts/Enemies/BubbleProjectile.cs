@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class BubbleProjectile : MonoBehaviour
 {
     [Header("Trajectory Settings")]
@@ -9,16 +10,19 @@ public class BubbleProjectile : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Boxfish owner;
-
     private bool popped = false;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
 
     public void Initialize(Transform target, Boxfish shooter)
     {
         owner = shooter;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
 
-        if (rb == null) return;
+        if (rb == null || target == null) return;
 
         Vector2 start = transform.position;
         Vector2 end = target.position;
@@ -51,19 +55,25 @@ public class BubbleProjectile : MonoBehaviour
         bool hitPlatform = col.gameObject.layer == LayerMask.NameToLayer("Platform");
 
         if (hitPlayer)
-            if (!PlayerController.Instance.playerState.Invincible && !PlayerController.Instance.IsDead)
-                PlayerController.Instance.TakeDamage(damage);
+        {
+            var pc = PlayerController.Instance;
+            if (pc != null && pc.playerState != null && !pc.playerState.Invincible && !pc.IsDead)
+            {
+                pc.TakeDamage(damage);
+            }
+        }
 
         if (hitPlayer || hitGround || hitPlatform)
         {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
 
-            if (anim != null)
-                anim.SetTrigger("Pop");
-            else
-                Pop();
+            if (anim != null) anim.SetTrigger("Pop");
+            else Pop();
         }
     }
 

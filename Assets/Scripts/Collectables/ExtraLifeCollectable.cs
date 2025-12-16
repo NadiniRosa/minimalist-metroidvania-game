@@ -17,6 +17,9 @@ public class ExtraLifeCollectable : MonoBehaviour
 
         player.UnlockExtraLife();
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.HealthCollected);
+
         if (destroyOnCollect)
             Destroy(gameObject);
     }

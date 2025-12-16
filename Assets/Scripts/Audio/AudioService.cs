@@ -17,7 +17,10 @@ public enum SFXType
     JellyfishTrampoline,
     PropBreaking,
     Checkpoint,
-    Button
+    Button,
+    HealthCollected,
+    PowerUp,
+    RuneDoor
 }
 
 public enum MusicType

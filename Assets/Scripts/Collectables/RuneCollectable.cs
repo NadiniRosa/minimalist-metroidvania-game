@@ -22,6 +22,9 @@ public class RuneCollectable : MonoBehaviour
         if (runeCounter != null)
             runeCounter.Refresh();
 
+        if (AudioService.Instance != null)
+            AudioService.Instance.PlaySFX(SFXType.PowerUp);
+
         if (destroyOnCollect)
             Destroy(gameObject);
     }
